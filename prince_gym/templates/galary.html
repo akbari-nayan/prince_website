@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{%  load static %}
+{% block title %}   
+GALLARY 
+{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/galary.css' %}">
+{% endblock css %}
+{% block js %}
+<script src="{% static 'javascript/galary.js' %}"></script>
+{% endblock js %}
+{% block body %}
+
+    <div class="prince_gym_gallary">
+        <img id="main-img" src=" {% static  'images/0.jpg' %} " alt="">
+    <ul>
+        <li> <img onclick="myfun(0)" src=" {% static  'images/0.jpg' %} " alt=""></li>
+        <li> <img onclick="myfun(1)" src=" {% static  'images/1.jpg' %} " alt=""></li>
+        <li> <img onclick="myfun(2)" src=" {% static  'images/2.jpg' %} " alt=""></li>
+        <li> <img onclick="myfun(3)" src=" {% static  'images/3.jpg' %} " alt=""></li>
+        <li> <img onclick="myfun(4)" src=" {% static  'images/4.jpg' %} " alt=""></li>
+        <li> <img onclick="myfun(5)" src=" {% static  'images/5.jpg' %} " alt=""></li>
+        <li> <img onclick="myfun(6)" src=" {% static  'images/6.jpg' %} " alt=""></li>
+        <li> <img onclick="myfun(7)" src=" {% static  'images/7.jpg' %} " alt=""></li>
+    </ul>
+     </div>
+   
+{% endblock body %}
+

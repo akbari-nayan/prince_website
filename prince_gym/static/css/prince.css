@@ -1,0 +1,261 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+header {
+    font-family: 'Baloo Bhai 2', cursive;
+    background-image: url(/static/images/GYM2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.navbar-main {
+    background: none;
+    position: fixed;
+    width: 100%;
+    margin-left: 0;
+}
+
+.navbar-others {
+    background-color:rgb(207, 124, 55)!important;
+    width: 100%;
+    position: fixed;
+    margin-left: 0;
+}
+.left {
+    font-size: 30px;
+    /* margin-left: 30px; */
+}
+.navbar {
+    margin: 0px;
+    padding: 0px 15px;
+}
+.right {
+    padding: 20px;
+    margin-top: 10px;
+}
+.my-btn  {
+    background: none;
+    color: white;
+    font-size: 13px;
+    width: 63px;
+    height: 21px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.btn-signup {
+    margin: -7px;
+}
+.my-btn:hover , .my-btn:active {
+    color: rgb(207, 124, 55);
+    color: black;
+}
+.navbar li {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 22px;
+}
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navbar li a:hover, .navbar li a:active {
+    color: rgb(207, 124, 55);
+    color: white;
+}
+#title-fitness {
+    display: block;
+    font-family: 'Baloo Bhai 2', cursive;
+    border: 2px sold red;
+    padding-bottom: 100vh;
+    padding: 200px 50px;
+}
+#title-fitness h1{
+    color: white;
+    font-size: 59px;
+}
+#title-fitness span, .footer-rights span {
+    color: rgb(207, 124, 55);
+}
+
+/* First Page */
+
+.first-page {
+    background-color: #252322;
+    text-align: center;
+    padding: 50px 10px;
+}
+.first-page h1 {
+    margin: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(207, 124, 55);
+}
+.first-page img {
+    width: 250px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.first-page img:hover {
+    transform: scale(1.5);
+    background-color: lightgreen;
+}
+.first-page h2 {
+    text-align: center;
+}
+
+/* Footer Page */
+.footer {
+    /* background-color: rgb(207, 124, 55); */
+    background-image: url(/static/images/GYM1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    padding-top: 100px;
+    margin-right: 0;
+}
+.footer h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+.footer h3 {
+    font-size: 18px;
+}
+.footerA-para {
+    margin-top: 20px;
+    padding: 0px 20px;
+    font-size: 14px;
+    font-weight: 500;
+} 
+.footerA {
+    padding-top: 10px;
+    padding-right: 1px;
+    padding-left: 55px;
+}
+.footerB h3 {
+    font-weight: bold;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+.footerC h3 {
+    font-weight: bold;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+.footerD {
+    padding-left: 25px;
+    display: inline-block;
+}
+.footerB {
+    padding-left: 50px;
+}
+.footerD ul li {
+    list-style: square;
+}
+.footerD h5 {
+    padding: 5px;
+}
+.footerD h4 {
+    padding: 7px;
+    padding-bottom: 0;
+}
+.footerD p {
+    padding-left: 7px;
+}
+.footerD h3 {
+    padding-left: 40px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.Social-media  {
+    padding-top: 20px;
+    text-align: center;
+}
+.Social-media ul{
+    display: inline-block;
+}
+.Social-media ul li {
+    display: inline;
+}
+.Social-img {
+    width: 50px;  
+    padding: 16px;
+}
+.Social-media ul li img:hover {
+    width: 45px;
+    /* transform: scale(2); */
+}
+.Social-media h3 {
+    color: white;
+    font-weight: bold;
+    padding-left: 50px;
+}
+.footer-rights {
+    background-color: black;
+    padding: 8px;
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+}
+.footerC ul li{
+    display: block;
+    padding: 3px;
+} 
+.footerC ul li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+.footerC ul li a:hover {
+    color: rgb(207, 124, 55);
+}
+.footerB ul li{
+    text-decoration: none;
+    padding: 2px;
+}
+/* Footer End*/
+
+/* Logo */ 
+#main-logo {
+    margin: 5px 40px;
+}
+.logo {
+    display: inline-block;
+}
+.prince {
+    margin:-10px 10px;
+    font-size: 18px !important;
+    padding-top: 0;
+    color: white;
+    font-weight: bolder;
+}
+.logo-image {
+    padding-left: 25px;
+    filter: invert(100);
+    width: 50px;
+}
+#footer-logo {
+    margin: 10px 120px;
+}
+#footer-prince {
+    margin-top: 0px;
+}
+.my-btn-home:hover,  .my-btn-home:active{
+    color: black;
+}
+.navbar li a:hover, .navbar li a:active {
+    color: rgb(207, 124, 55);
+    color: black;
+}
+.navbar-home-page li a:hover {
+    color: black;
+}

@@ -1,0 +1,31 @@
+.prince_gym_gallary {
+    /* padding: 15px; */
+    margin: 0px;
+    padding: 50px;
+    text-align: center;
+    background-color: #252322;
+}
+.prince_gym_gallary ul li img {
+    width: 144px;
+    height: 95px;
+}
+.prince_gym_gallary ul li {
+    display: inline;
+    padding: 0;
+    margin: -2px;
+}
+.prince_gym_gallary ul {
+    padding: 0;
+    display: inline-block;
+    background-color: black;
+}
+.prince_gym_gallary ul li img:hover {
+    border: 2px dotted orangered;
+}
+#main-img {
+    text-align: center;
+    width: 1152px;
+    height: 530px; 
+    /* border: 2px solid black; */
+    border-bottom: none;
+}

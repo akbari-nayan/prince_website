@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Contact Us - Prince Fitness
+{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/contact_us.css' %}">
+{% endblock css %}
+{% block body %}
+
+<div class="form-and-contact-mix">
+    <div class="Contact-us-form-main">
+        <div class="my-contact-us">
+            <h1> Prince Fitness</h1>
+            <hr>
+            <form action="" method="POST" class="contact-form">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form-group form-{{field.name}}">
+                    <label>{{ field.label}} :</label>
+                    {{field}}
+                </div>
+                {% endfor %}
+
+                <div class="form-group">
+                    <button class="my-btn cnt-btn">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Contact page -->
+    <div class="Contact-page">
+        <h1 id="contact-text">Contact us</h1>
+        <div class="row column-contact">
+            <div class="col-md-4">
+                <h1>Email</h1>
+                <h3>info@princefitness.in</h3>
+                <h3>query@princefitness.in</h3>
+            </div>
+            <div class="col-md-4">
+                <h1>Phone</h1>
+                <h3>+(026) 346585</h3>
+                <h3>+(026) 346586</h3>
+                <h3>+91 123456789</h3>
+            </div>
+            <div class="col-md-4">
+                <h1>Location</h1>
+                <h3>BTM Layout 1,</h3>
+                <h3>Banglore, 360055</h3>
+                <h3>Karnataka, India</h3>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

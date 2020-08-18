@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+SIGN-UP - Prince Fitness
+{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/signup_page.css' %}">
+{% endblock css %}
+{% block body %}
+
+<div class="sign-up-main">
+    <div class="my-sign-up">
+        <h1>Welcome to Prince Fitness</h1>
+        <hr>
+        <form action="" method="POST" class="register-form">{% csrf_token %}
+            {% for field in form %}
+
+            {% if field.name in 'password1' %}
+            {% for c_field in c_form %}
+            <div class="form-group form-{{field.name}}">
+                <label>{{ c_field.label}} :</label>
+                {{c_field}}
+            </div>
+            {% endfor %}
+            {% endif %}
+
+            <div class="form-group form-{{field.name}}">
+                <label>{{ field.label}} :</label>
+                {{field}}
+            </div>
+            {% endfor %}
+
+            <div class="form-group">
+                <button class="my-btn reg-btn">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock body %}
+<!-- Sign Up Page -->

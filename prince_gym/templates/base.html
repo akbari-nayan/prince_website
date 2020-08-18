@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}
+
+        {% endblock title %}</title>
+        <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/prince.css' %}">
+        {% block css %}
+
+        {% endblock css %}
+        <script src="{% static 'javascript/prince.js' %}"></script>
+
+        {% block js %}
+
+        {% endblock js %}
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="row navbar-main navbar-others">
+                <div class="col-md-2 left">
+                    <a href="{% url 'gym:home' %}">
+                        <div class="logo" id="main-logo">
+                            <img class="logo-image" src="{% static 'logo.png'%}" alt="">
+                            <p class="prince">PRINCE</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-8 mid">
+                    <ul class="navbar navbar-home-page">
+                        <li><a href="{% url 'gym:home' %}"> HOME</a></li>
+                        <li><a href="{% url 'gym:about_us' %}"> ABOUT US</a></li>
+                        <li><a href="#"> FITNESS</a></li>
+                        <li><a href="#"> SERVICE </a></li>
+                        <li><a href="{% url 'gym:galary' %}"> GALLARY</a></li>
+                        <li><a href="#"> BLOG</a></li>
+                        <li><a href="{% url 'gym:contact' %}"> CONTACT </a></li>
+                    </ul>
+                </div>
+                {% if user.is_authenticated %}
+                <div class="col-md-2 right row">
+                    <div class="col-sm-6 btn-signup">
+                     <a href="{% url 'gym:logout' %}"> <button class="my-btn my-btn-home">LogOut</button> </a>
+                    </div>
+                    <div class="col-sm-6 btn-signup">
+                        <!-- {{user}} -->
+                      <a href=""> <button class="my-btn my-btn-home">{{user}}</button> </a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="col-md-2 right row">
+                    <div class="col-sm-6 btn-signup">
+                     <a href="{% url 'gym:register' %}"> <button class="my-btn my-btn-home">SIGN UP</button> </a>
+                    </div>
+                    <div class="col-sm-6 btn-signup">
+                      <a href="{% url 'gym:login' %}"> <button class="my-btn my-btn-home">LOG IN</button> </a>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            {% block titlepage %}
+           
+            {% endblock titlepage %}
+        </header>
+
+        {% block body %}
+
+        {% endblock body %}
+
+        <!-- FOOTER-PAGE -->
+        <div class="full-footer">
+            <div class="footer">
+                <div class="row">
+                    <div class="col-md-4 footerA">
+                        <div class="logo" id="footer-logo">
+                            <a href="{% url 'gym:home' %}">
+                                <img class="logo-image" src="{% static 'logo.png' %}" alt="">
+                                <p class="prince" id="footer-prince">PRINCE</p>
+                            </a>
+                        </div>
+                        <div>
+                            <p class="footerA-para">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Delectus eveniet
+                                ut neque repudiandae laborum. Nam inventore
+                                numquam minus praesentium, laborum et velit
+                                voluptatibus. Reprehenderit unde eaque saepe
+                                animi amet perferendis laborum repellat a
+                                laudantium ullam tenetur nam error, veritatis
+                                aspernatur sunt! Nam vel ex tempore!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 footerB">
+                        <h3>OUR BLOG </h3>
+                        <ul>
+                            <li>
+                                <h4>Most People Who Work</h4>
+                                <p>&#x1F550; July 27, 2020</p>
+                            </li>
+                            <li>
+                                <h4> Freelance Design Tricks</h4>
+                                <p>&#x1F550; March 15, 2020</p>
+                            </li>
+                            <li>
+                                <h4>Health is Wealth</h4>
+                                <p>&#x1F550; DEC 02, 2019</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footerC">
+                        <h3>PROGRAM </h3>
+                        <ul>
+                            <li><a href="#"><h4>Bodybuilding</h4> </a></li>
+                            <li><a href="#"><h4>Runing</h4> </a></li>
+                            <li><a href="#"><h4>Weight Losss</h4> </a></li>
+                            <li><a href="#"><h4>Boxing</h4></a></li>
+                            <li><a href="#"><h4>GYM Fitness</h4> </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 footerD">
+                        <h3>GET INFO</h3>
+                        <ul>
+                            <li>
+                                <h4>&#x260E; Phone</h4>
+                                <p>+91 0123456789</p>
+                            </li>
+                            <li>
+                                <h4>&#128231; Email</h4>
+                                <p>getinfo@princefitness.com</p>
+                            </li>
+                            <li>
+                                <h4> &#xe55f; Address</h4>
+                                <p>BTM Layout, Banglore, India</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Social-media">
+                    <h3 class="follow-us">FOLLOW US</h3>
+                    <ul>
+                        <li><a href="#"> <img class="Social-img" src="{% static 'icons/insta.png' %}" alt=""> </a></li>
+                        <li><a href="#"> <img class="Social-img" src="{% static 'icons/youtube.png' %}" alt=""> </a></li>
+                        <li><a href="#"> <img class="Social-img" src="{% static 'icons/linkedin.png' %}" alt=""> </a></li>
+                        <li><a href="#"> <img class="Social-img" src="{% static 'icons/fb.png' %}" alt=""> </a></li>
+                        <li><a href="#"> <img class="Social-img" src="{% static 'icons/insta.png' %}" alt=""> </a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3 class="footer-rights">All Copyrights @2020 Resereved With
+                &#128420; <span>Prince Fitness</span> </h3>
+        </div>
+    </body>
+
+</html>

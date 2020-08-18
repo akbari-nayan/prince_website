@@ -1,0 +1,52 @@
+body {
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.about-page {
+    padding-top: 100px;
+    color: white;
+    background-color: rgb(180, 173, 173);
+    /* background-color: white; */
+}
+.abt-page1 {
+    margin-top: 40px;
+}
+.abt-page2 {
+    padding-bottom: 40px;
+}
+.img-box img {
+    width: 230px;
+    height: 250px;
+    margin-bottom: 15px;
+    border-radius: 60px;
+}
+.img-box {
+    padding-left: 180px;
+    margin: 30px 0px;
+}
+.img-box img:hover {
+    transform: scale(1.2);
+}
+.about-page h1 {
+    text-align: center;
+    background-color: black;
+    background-color: #827673;
+    text-align: center;
+    opacity: 1;
+    border-radius: 25px;
+}
+.img-box h4 {
+    background-color: rgb(207, 124, 55);
+    border-radius: 30px;
+    width: 225px;
+    text-align: center;
+    padding: 8px;
+    font-size: 22px;
+}
+.img-box h5 {
+    background-color: rgb(207, 124, 55);
+    border-radius: 30px;
+    width: 140px;
+    text-align: center;
+    padding: 6px;
+    margin-left: 47px;
+}

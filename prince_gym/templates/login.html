@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+LOGIN - Prince Fitness
+{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/loginpage.css' %}">
+{% endblock css %}
+{% block body %}
+
+<div class="main-log-in-page">
+  <div class="my-log-in">
+    <h1>Welcome to Prince Fitness</h1>
+    <hr>
+    <form action="" method="POST" class="login-form" >{% csrf_token %} 
+      {% for field in form %}
+      <div class="form-group form-{{field.name}}">
+        <label>{{ field.label}} :</label>
+        {{field}}
+      </div>
+      {% endfor %}
+      
+      <div class="form-group">
+        <button class="my-btn login-btn">Log In</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock body %}
